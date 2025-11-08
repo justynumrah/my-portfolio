@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5 text-center">
+  <!-- Show the error message passed from app.js -->
+  <h1><%= message %></h1>
+
+  <!-- Show the error status code (e.g., 404, 500) -->
+  <h2>Status: <%= error.status || 500 %></h2>
+
+  <!-- Show the stack trace only in development -->
+  <% if (error.stack) { %>
+    <pre class="text-start mx-auto" style="max-width: 800px;"><%= error.stack %></pre>
+  <% } %>
+
+  <!-- Button to return to homepage -->
+  <a href="/" class="btn btn-primary mt-4">Go Home</a>
+</div>
+
+<%- include('partials/footer') %>
